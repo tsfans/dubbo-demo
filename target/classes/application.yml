@@ -1,6 +1,6 @@
 spring:
   application:
-    name: scaffold
+    name: dubbo-demo
   profiles:
     active:
       dev
@@ -11,6 +11,3 @@ server:
   port: 8080
   servlet:
     context-path: /
-    
-logging:
-  config: classpath:logback.xml
