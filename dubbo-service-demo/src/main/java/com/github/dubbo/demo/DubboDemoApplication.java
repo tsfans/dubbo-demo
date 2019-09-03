@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
-@EnableDubbo(scanBasePackages = "com.github.dubbo.demo")
+@EnableDubbo(scanBasePackages = "com.github.dubbo.demo.service")
 @SpringBootApplication
 public class DubboDemoApplication {
 
