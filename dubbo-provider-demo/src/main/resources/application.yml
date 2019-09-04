@@ -1,0 +1,14 @@
+# Dubbo config properties
+dubbo:
+  application:
+    name: dubbo-provider-demo
+    id: dubbo-provider-demo
+  protocol:
+    name: dubbo
+    port: 12345
+  registry:
+    id: provider
+    address: N/A
+
+server:
+  port: 8080
