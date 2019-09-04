@@ -1,0 +1,11 @@
+# Dubbo config properties
+dubbo:
+  application:
+    name: dubbo-provider-demo
+    id: dubbo-provider-demo
+  protocol:
+    name: dubbo
+    port: 12345
+  registry:
+    id: provider
+    address: zookeeper://127.0.0.1:2181

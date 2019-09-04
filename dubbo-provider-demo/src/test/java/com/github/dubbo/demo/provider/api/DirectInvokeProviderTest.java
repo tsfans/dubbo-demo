@@ -1,4 +1,4 @@
-package com.github.dubbo.demo.api;
+package com.github.dubbo.demo.provider.api;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -7,16 +7,16 @@ import org.junit.jupiter.api.Test;
 
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ReferenceConfig;
-import com.alibaba.dubbo.config.RegistryConfig;
 import com.github.dubbo.demo.facade.api.HelloService;
 
 /**
- * 直接注册到注册中心进行服务调用测试
+ * 直连调用服务
  */
-public class DirectConnectToZkTest{
+public class DirectInvokeProviderTest {
 
     private static final String APP_NAME = "dubbo-demo-consumer";
-    private static final String DUBBO_REGISTRY_URL = "zookeeper://127.0.0.1:2181";
+    private static final String PROVIDER_URL = "dubbo://127.0.0.1:12345";
+    private static final String VERSION = "1.0.0";
 
     private static HelloService helloService;
 
@@ -24,16 +24,18 @@ public class DirectConnectToZkTest{
     void testHello() {
         String name = "swift";
         String hello = helloService.hello(name);
+        System.out.println(hello);
         assertEquals(true, hello.contains(name));
     }
-    
+
     @BeforeAll
-    public static void buildReference() {
+    public static void buildReferenceFromProvider() {
         ReferenceConfig<HelloService> reference = new ReferenceConfig<>();
         reference.setApplication(new ApplicationConfig(APP_NAME));
-        reference.setRegistry(new RegistryConfig(DUBBO_REGISTRY_URL));
+        reference.setUrl(PROVIDER_URL);
         reference.setInterface(HelloService.class);
-        reference.setVersion("1.0.0");
+        reference.setVersion(VERSION);
         helloService = reference.get();
     }
+
 }

@@ -5,14 +5,7 @@ dubbo:
     id: dubbo-consumer-demo
   protocol:
     name: dubbo
-    port: 12345
+    port: 12346
   registry:
     id: consumer
     address: zookeeper://127.0.0.1:2181
-  service:
-    version:
-      v1: 1.0.0
-      v2: 2.0.0
-
-server:
-  port: 8090

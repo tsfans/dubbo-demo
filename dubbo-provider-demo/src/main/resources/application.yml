@@ -1,18 +1,13 @@
-# Dubbo config properties
+server:
+  port: 8080
+  
+spring:
+  profiles:
+    active:
+    - provider
+    
 dubbo:
-  application:
-    name: dubbo-provider-demo
-    id: dubbo-provider-demo
-  protocol:
-    name: dubbo
-    port: 12345
-  registry:
-    id: provider
-    address: zookeeper://127.0.0.1:2181
   service:
     version:
       v1: 1.0.0
       v2: 2.0.0
-
-server:
-  port: 8080

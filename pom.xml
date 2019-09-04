@@ -21,7 +21,6 @@
 	<modules>
 		<module>dubbo-api-demo</module>
 		<module>dubbo-provider-demo</module>
-		<module>dubbo-consumer-demo</module>
 	</modules>
 
 	<properties>

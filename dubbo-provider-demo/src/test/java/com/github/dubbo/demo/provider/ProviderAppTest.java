@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -21,16 +20,16 @@ import com.github.dubbo.demo.facade.bean.response.BaseResponse;
 import com.github.dubbo.demo.facade.common.enums.ResponseCode;
 
 
-@SpringBootTest
+@SpringBootTest(classes = {ProviderApp.class})
 @ExtendWith(SpringExtension.class)
 @AutoConfigureMockMvc
 @DisplayName("基础测试类，继承此类可获取spring测试框架支持")
-public class DubboDemoApplicationTests {
+public class ProviderAppTest {
 
     @Autowired
     protected MockMvc mockMvc;
 
-    @Test
+//    @Test
     @DisplayName("Test ping controller")
     void ping() throws Exception {
         RequestBuilder req = MockMvcRequestBuilders.get("/ping");
