@@ -17,7 +17,7 @@
 		<dependency>
 			<groupId>com.github</groupId>
 			<artifactId>dubbo-api-demo</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 
 		<dependency>
@@ -37,10 +37,20 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- Dubbo Spring Boot Starter -->
 		<dependency>
-			<groupId>org.apache.dubbo</groupId>
+			<groupId>com.alibaba.boot</groupId>
 			<artifactId>dubbo-spring-boot-starter</artifactId>
-			<version>2.7.3</version>
+			<version>0.2.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>${dubbo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
 		</dependency>
 
 		<!-- Add Log4j2 Dependency -->
@@ -71,21 +81,17 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
-			<version>1.2.59</version>
 		</dependency>
 
-		<!-- Zookeeper dependencies -->
+		<!-- Zookeeper -->
 		<dependency>
-			<groupId>org.apache.dubbo</groupId>
-			<artifactId>dubbo-dependencies-zookeeper</artifactId>
-			<version>2.7.3</version>
-			<type>pom</type>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-			</exclusions>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-framework</artifactId>
 		</dependency>
 
 	</dependencies>

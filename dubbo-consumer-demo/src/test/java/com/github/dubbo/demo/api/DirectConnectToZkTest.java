@@ -2,11 +2,12 @@ package com.github.dubbo.demo.api;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.apache.dubbo.config.ApplicationConfig;
-import org.apache.dubbo.config.ReferenceConfig;
-import org.apache.dubbo.config.RegistryConfig;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import com.alibaba.dubbo.config.ApplicationConfig;
+import com.alibaba.dubbo.config.ReferenceConfig;
+import com.alibaba.dubbo.config.RegistryConfig;
 import com.github.dubbo.demo.facade.api.HelloService;
 
 /**
@@ -25,7 +26,7 @@ public class DirectConnectToZkTest{
         String hello = helloService.hello(name);
         assertEquals(true, hello.contains(name));
     }
-
+    
     @BeforeAll
     public static void buildReference() {
         ReferenceConfig<HelloService> reference = new ReferenceConfig<>();

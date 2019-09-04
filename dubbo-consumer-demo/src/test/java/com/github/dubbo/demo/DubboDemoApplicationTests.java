@@ -17,11 +17,12 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
+import com.github.dubbo.demo.consumer.ConsumerApp;
 import com.github.dubbo.demo.facade.bean.response.BaseResponse;
 import com.github.dubbo.demo.facade.common.enums.ResponseCode;
 
 
-@SpringBootTest
+@SpringBootTest(classes = {ConsumerApp.class})
 @ExtendWith(SpringExtension.class)
 @AutoConfigureMockMvc
 @DisplayName("基础测试类，继承此类可获取spring测试框架支持")
