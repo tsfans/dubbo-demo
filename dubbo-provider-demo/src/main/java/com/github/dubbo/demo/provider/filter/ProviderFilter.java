@@ -11,12 +11,13 @@ import com.alibaba.dubbo.rpc.RpcException;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@Activate(group = {Constants.PROVIDER}, order = Integer.MIN_VALUE + 1)
+@Activate(group = {Constants.PROVIDER})
 public class ProviderFilter implements Filter {
 
     @Override
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
         log.info(">>>>>> ProviderFilter has been invoked <<<<<<");
+        
         return invoker.invoke(invocation);
     }
 
