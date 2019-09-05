@@ -15,6 +15,12 @@
 	<dependencies>
 
 		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
 			<groupId>com.github</groupId>
 			<artifactId>dubbo-api-demo</artifactId>
 			<version>1.0.0</version>
