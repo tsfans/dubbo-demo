@@ -27,7 +27,7 @@ public class DirectInvokeProviderTest {
     @Test
     void testHello() {
         buildReferenceFromProvider(VERSION1);
-        String hello = helloService.hello(NAME);
+        String hello = helloService.hello(NAME).getData();
         System.out.println(hello);
         assertEquals(true, hello.contains(NAME));
     }

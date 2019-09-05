@@ -11,7 +11,7 @@ import com.alibaba.dubbo.rpc.RpcException;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@Activate(group = {Constants.PROVIDER}, order = Integer.MIN_VALUE)
+@Activate(group = {Constants.PROVIDER}, order = Integer.MIN_VALUE + 1)
 public class ProviderFilter implements Filter {
 
     @Override

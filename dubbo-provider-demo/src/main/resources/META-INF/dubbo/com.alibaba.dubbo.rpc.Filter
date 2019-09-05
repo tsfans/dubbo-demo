@@ -1,2 +1,3 @@
 consumerFilter=com.github.dubbo.demo.provider.filter.ConsumerFilter
 providerFilter=com.github.dubbo.demo.provider.filter.ProviderFilter
+parameterValidationFilter=com.github.dubbo.demo.provider.filter.ParameterValidationFilter

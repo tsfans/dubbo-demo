@@ -22,7 +22,7 @@ public class HelloServiceTest extends ProviderAppTest {
 
     @Test
     void testHello() {
-        String hello = helloService.hello(NAME);
+        String hello = helloService.hello(NAME).getData();
         System.out.println(hello);
         assertEquals(true, hello.contains(NAME));
     }

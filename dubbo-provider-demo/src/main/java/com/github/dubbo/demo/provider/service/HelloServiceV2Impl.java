@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Profile;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.dubbo.demo.facade.api.HelloService;
+import com.github.dubbo.demo.facade.bean.response.BaseResponse;
 
 @Profile("!consumer")
 @Service(version = "${dubbo.service.version.v2}")
@@ -17,8 +18,9 @@ public class HelloServiceV2Impl implements HelloService {
     private String serviceVersion;
 
     @Override
-    public String hello(String name) {
-        return String.format("[%s][%s] : Hello, %s", serviceName, serviceVersion, name);
+    public BaseResponse<String> hello(String name) {
+        String data = String.format("[%s][%s] : Hello, %s", serviceName, serviceVersion, name);
+        return BaseResponse.success(data);
     }
 
 }

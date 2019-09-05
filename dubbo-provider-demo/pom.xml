@@ -24,6 +24,12 @@
 			<groupId>com.github</groupId>
 			<artifactId>dubbo-api-demo</artifactId>
 			<version>1.0.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-validator</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>

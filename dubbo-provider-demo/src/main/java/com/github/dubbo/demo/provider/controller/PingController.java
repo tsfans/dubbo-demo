@@ -24,9 +24,9 @@ public class PingController {
     @GetMapping("/hello")
     public BaseResponse<String> hello(String name, String version) {
         if (version != null && version.equalsIgnoreCase("V2")) {
-            return BaseResponse.success(helloServiceV2.hello(name));
+            return helloServiceV2.hello(name);
         } else {
-            return BaseResponse.success(helloServiceV1.hello(name));
+            return helloServiceV1.hello(name);
         }
     }
 }
