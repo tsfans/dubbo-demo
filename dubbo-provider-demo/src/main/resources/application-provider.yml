@@ -9,4 +9,5 @@ dubbo:
   registry:
     id: provider
     address: zookeeper://127.0.0.1:2181
-#    address: N/A
+    # 不使用zookeeper
+    # address: N/A

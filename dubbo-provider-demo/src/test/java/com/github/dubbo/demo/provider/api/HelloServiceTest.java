@@ -10,9 +10,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.github.dubbo.demo.facade.api.HelloService;
 import com.github.dubbo.demo.provider.ProviderAppTest;
 
-/**
- * 依托spring注册到注册中心进行测试
- */
+@DisplayName("依托spring注册到注册中心进行测试")
 @ActiveProfiles("consumer")
 public class HelloServiceTest extends ProviderAppTest {
     
