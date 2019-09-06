@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -29,7 +30,7 @@ public class ProviderAppTest {
     @Autowired
     protected MockMvc mockMvc;
 
-//    @Test
+    @Test
     @DisplayName("Test ping controller")
     void ping() throws Exception {
         RequestBuilder req = MockMvcRequestBuilders.get("/ping");
