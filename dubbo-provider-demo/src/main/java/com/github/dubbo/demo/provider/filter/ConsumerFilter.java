@@ -17,6 +17,7 @@ public class ConsumerFilter implements Filter {
     @Override
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
         log.info(">>>>>> ConsumerFilter has been invoked <<<<<<");
+        
         return invoker.invoke(invocation);
     }
 

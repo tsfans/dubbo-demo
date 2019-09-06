@@ -2,6 +2,7 @@ package com.github.dubbo.demo.provider.api;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.context.ActiveProfiles;
 
@@ -21,6 +22,7 @@ public class HelloServiceTest extends ProviderAppTest {
     private HelloService helloService;
 
     @Test
+    @DisplayName("测试HelloService")
     void testHello() {
         String hello = helloService.hello(NAME).getData();
         System.out.println(hello);
