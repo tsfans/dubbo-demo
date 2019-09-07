@@ -8,6 +8,6 @@ dubbo:
     port: 12346
   registry:
     id: consumer
-    address: zookeeper://127.0.0.1:2181
-    # 不使用zookeeper
-    # address: N/A
+    address: N/A
+    # 使用zookeeper
+    # address: zookeeper://127.0.0.1:2181
